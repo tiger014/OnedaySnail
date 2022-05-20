@@ -11,6 +11,7 @@
     "com.unity.xr.oculus": "3.0.1",
     "com.unity.xr.openxr": "1.4.1",
     "com.unity.xr.windowsmr": "5.4.1",
+    "jp.digicre.flower-git": "https://github.com/nenjiru/FlowerGit.git",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
