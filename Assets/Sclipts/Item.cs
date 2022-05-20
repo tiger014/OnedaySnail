@@ -14,5 +14,9 @@ public class Item : MonoBehaviour
 
 		// 衝突したら自身を削除する
 		Destroy(gameObject);
+
+		//スコアのゲームオブジェクトを取得する
+		GameObject scoreTextGo = GameObject.Find("ScoreText");
+		scoreTextGo.SendMessage("OnScore", 1);
 	}
 }
