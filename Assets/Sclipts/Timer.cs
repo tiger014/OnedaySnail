@@ -23,10 +23,12 @@ public class Timer : MonoBehaviour
         // 残り時間を計算する
         currentTime -= Time.deltaTime;
 
-        // ゼロ秒以下にならないようにする
+        // ゼロになったら
         if (currentTime <= 0.0f)
         {
+            // ゼロ秒以下にならないようにする
             currentTime = 0.0f;
+
         }
         int minutes = Mathf.FloorToInt(currentTime / 60F);
         int seconds = Mathf.FloorToInt(currentTime - minutes * 60);
