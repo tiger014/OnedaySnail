@@ -56,12 +56,12 @@ public class CameraWalk : MonoBehaviour
 		if (lTrigger1 >= 0.11f && lTrigger1 < 0.8f)
 		{
 			//Debug.Log("’†");
-			if (pos.y >= -8f)
+			if (pos.y >= -4f)
 			{
 				posVal = posVal - squatspeed;
 				pos.y = posVal;
 			}
-			if (pos.y <= -7.9f)
+			if (pos.y <= -3.9f)
 			{
 				posVal = posVal + squatspeed;
 				pos.y = posVal;
@@ -76,10 +76,10 @@ public class CameraWalk : MonoBehaviour
 			posVal = posVal - squatspeed;
 			pos.y = posVal;
 
-			if (pos.y <= -17f)
+			if (pos.y <= -8f)
 			{
-				pos.y = -17f;
-				posVal = -17f;
+				pos.y = -8f;
+				posVal = -8f;
 			}
 
 			cameraObject.transform.localPosition = new Vector3(0f, pos.y, 0f);

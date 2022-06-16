@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.unity.cinemachine": {
+      "version": "2.8.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.editorcoroutines": {
       "version": "1.0.0",
       "depth": 1,
@@ -58,6 +65,15 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.postprocessing": {
+      "version": "3.2.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.settings-manager": {
@@ -164,7 +180,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "dababac44a033c2e6c8128507592297c393ebf82"
+      "hash": "dfed34d95ef1f4fc1dafeb669a49979d6aa33626"
     },
     "jp.digicre.seika-game-kit": {
       "version": "https://github.com/nenjiru/SeikaGameKit.git",
