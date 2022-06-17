@@ -2054,7 +2054,7 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		{
 			try
 			{
-				Debug.Log("[OVRManager] AudioInChanged event");
+				//Debug.Log("[OVRManager] AudioInChanged event");
 				if (AudioInChanged != null)
 					AudioInChanged();
 			}

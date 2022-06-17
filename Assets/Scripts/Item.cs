@@ -5,18 +5,24 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
 	public ParticleSystem particle;
+	public GameObject Snail;
 
 	//衝突時に実行されるメソッド
 	void OnTriggerEnter(Collider other)
 	{
-		// パーティクルを再生する
-		particle.Play();
+		Debug.Log(other.name);
 
-		// 衝突したら自身を削除する
-		Destroy(gameObject);
+		if(other.name == "Snali")
+        {
+			// パーティクルを再生する
+			particle.Play();
 
-		//スコアのゲームオブジェクトを取得する
-		GameObject scoreTextGo = GameObject.Find("ScoreText");
-		scoreTextGo.SendMessage("OnScore", 1);
+			// 衝突したら自身を削除する
+			Destroy(gameObject);
+
+			//スコアのゲームオブジェクトを取得する
+			GameObject scoreTextGo = GameObject.Find("ScoreText");
+			scoreTextGo.SendMessage("OnScore", 1);
+		}
 	}
 }

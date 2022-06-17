@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     [SerializeField] float gameTime = 20.0f;        // ゲーム制限時間 [s]
     Text uiText;                                    // UIText コンポーネント
     float currentTime;                              // 残り時間タイマー
+    public bool TimeOver;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class Timer : MonoBehaviour
             // ゼロ秒以下にならないようにする
             currentTime = 0.0f;
 
+            TimeOver = true;
         }
         int minutes = Mathf.FloorToInt(currentTime / 60F);
         int seconds = Mathf.FloorToInt(currentTime - minutes * 60);
