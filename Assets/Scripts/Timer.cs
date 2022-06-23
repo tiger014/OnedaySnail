@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Text))]
 public class Timer : MonoBehaviour
@@ -32,9 +33,13 @@ public class Timer : MonoBehaviour
 
             TimeOver = true;
         }
+
         int minutes = Mathf.FloorToInt(currentTime / 60F);
         int seconds = Mathf.FloorToInt(currentTime - minutes * 60);
         int mseconds = Mathf.FloorToInt((currentTime - minutes * 60 - seconds) * 1000);
         uiText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
+
+
 }
