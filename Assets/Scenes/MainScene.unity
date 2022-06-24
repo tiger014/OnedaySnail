@@ -847,6 +847,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58cd80e8735394b41ad92a2458c90f9a, type: 3}
+--- !u!1 &139367025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7730471475934613610, guid: 983d54d1d3a917b4a8ec3aad44d5c399, type: 3}
+  m_PrefabInstance: {fileID: 312843164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &139367029
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139367025}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 20
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 10}
 --- !u!1 &153193424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1488,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198136274}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &212454101 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+  m_PrefabInstance: {fileID: 467000544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &213245524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2395,6 +2419,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2447776121362496397, guid: 422191a179c8448e488b943568b22518, type: 3}
+--- !u!1001 &467000544
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2023426281}
+    m_Modifications:
+    - target: {fileID: 2012671149692756017, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_Name
+      value: Koke Item6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
 --- !u!1001 &475905261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3511,7 +3592,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012671149692756017, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_Name
-      value: Koke Item (2)
+      value: Koke Item3
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_RootOrder
@@ -3527,7 +3608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.39
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4452,7 +4533,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751361335}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.25
@@ -5264,6 +5345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1f880ecc6520e42aa63d39c7fd338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   TimeText: {fileID: 952457380}
   SnailAgent: {fileID: 868279887}
 --- !u!1001 &884176483
@@ -6164,6 +6246,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4954688070698626, guid: 58cd80e8735394b41ad92a2458c90f9a, type: 3}
   m_PrefabInstance: {fileID: 1963494212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1098167670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076251106804519006, guid: 522f75ad8bfc5464b90dae56cd68aa5c, type: 3}
+  m_PrefabInstance: {fileID: 6229177326107032653}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1106186979
 GameObject:
@@ -7325,6 +7412,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58cd80e8735394b41ad92a2458c90f9a, type: 3}
+--- !u!1 &1383524206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1383524207}
+  - component: {fileID: 1383524208}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1383524207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383524206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1633214808}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1383524208
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383524206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 10
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 5}
 --- !u!1 &1392143845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4336649099522820090, guid: e95575162ada11f41955cf2ddadadf67, type: 3}
@@ -8018,7 +8151,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012671149692756017, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_Name
-      value: Koke Item (4)
+      value: Koke Item5
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_RootOrder
@@ -8026,7 +8159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.98
+      value: -30.14
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8757,6 +8890,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   TimeText: {fileID: 952457380}
+  SnailShell: {fileID: 1098167670}
+  Snail1_Material: {fileID: 2100000, guid: bd286bc884ad1b543a3030d1cbc91854, type: 2}
+  Emission1: {fileID: 2800000, guid: 9b3774464d1ac6e41a3638832f0268a2, type: 3}
+  Emission2: {fileID: 2800000, guid: b88c014134fdc9f45b2a7231a98a0b70, type: 3}
+  Emission3: {fileID: 2800000, guid: 7d40b343550b2bc42b9c816d6bf047a2, type: 3}
+  Emission4: {fileID: 2800000, guid: e701f9808e163104cb31ff2c747f63fc, type: 3}
+  Emission5: {fileID: 2800000, guid: c1ab60176f04acf4093c1dc72bc9352c, type: 3}
+  Emission6: {fileID: 2800000, guid: f8c8e7e583c128e4e8f2988e903013ae, type: 3}
 --- !u!114 &1647028600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9493,7 +9634,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012671149692756017, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_Name
-      value: Koke Item (1)
+      value: Koke Item2
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_RootOrder
@@ -10766,7 +10907,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012671149692756017, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_Name
-      value: Koke Item (3)
+      value: Koke Item4
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_RootOrder
@@ -11524,6 +11665,7 @@ Transform:
   - {fileID: 707567504}
   - {fileID: 1875327116}
   - {fileID: 658411324}
+  - {fileID: 212454101}
   m_Father: {fileID: 1412521471}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12171,7 +12313,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012671149692756017, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_Name
-      value: Koke Item
+      value: Koke Item1
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_RootOrder
@@ -12179,7 +12321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.14
+      value: -25.94
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12187,7 +12329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.83
+      value: -11.15
       objectReference: {fileID: 0}
     - target: {fileID: 2012671149692756044, guid: 3082c446b149b42248757314bfbed8d4, type: 3}
       propertyPath: m_LocalRotation.w

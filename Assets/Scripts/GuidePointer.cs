@@ -11,8 +11,10 @@ public class GuidePointer : MonoBehaviour
     public float laserDistance = 100f;
     public LineRenderer lineRenderer;
     public Transform aimMarker;
+    public GameObject aimMarkerGm;
     public NavMeshAgent navMeshAgent;
     public bool useMouse;
+    public bool rayarea;
 
     [HideInInspector, SerializeField] int _rayTargetLayer = 0;
     int _rayMaskLayer;
@@ -55,19 +57,50 @@ public class GuidePointer : MonoBehaviour
         lineRenderer.SetPosition(0, rayStart);
         lineRenderer.SetPosition(1, rayEnd);
 
-        if (useMouse)
+        if (rayarea)
         {
-            if (Input.GetMouseButtonDown(0))
+            aimMarkerGm.SetActive(true);
+
+
+            if (useMouse)
             {
-                navMeshAgent.destination = rayEnd;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    navMeshAgent.destination = rayEnd;
+                }
+            }
+            else
+            {
+                if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+                {
+                    navMeshAgent.destination = rayEnd;
+                }
             }
         }
         else
         {
-            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
-            {
-                navMeshAgent.destination = rayEnd;
-            }
+            aimMarkerGm.SetActive(false);
+        }
+
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.name == "LaserArea")
+        {
+            Debug.Log("エリアに当たっている");
+
+            rayarea = true;
         }
     }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.name == "LaserArea")
+        {
+            Debug.Log("エリアを外れた");
+
+            rayarea = false;
+        }
+    }
+
 }

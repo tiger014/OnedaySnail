@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class SnailResult : MonoBehaviour
 {
+    public int score = 0;
     public GameObject TimeText;
     public NavMeshAgent SnailAgent;
     private float StopSpeed = 0.04f;
