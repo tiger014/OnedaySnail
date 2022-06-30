@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Text))]
 public class Timer : MonoBehaviour
@@ -11,18 +12,23 @@ public class Timer : MonoBehaviour
     Text uiText;                                    // UIText コンポーネント
     float currentTime;                              // 残り時間タイマー
     public bool TimeOver;
+    public Image FadeoutImage;                      //クリア後のフェードアウト
+    public float alpha = 0f;
+    float fadeSpeed = 0.008f;
 
     void Start()
     {
         // Textコンポーネント取得
         uiText = GetComponent<Text>();
         // 残り時間を設定
-        currentTime = gameTime;
+        currentTime = gameTime; 
     }
 
     void Update()
     {
-        // 残り時間を計算する
+        FadeoutImage.GetComponent<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);  //Image取得
+
+        // 残り時間を計算するS
         currentTime -= Time.deltaTime;
 
         // ゼロになったら
@@ -32,6 +38,10 @@ public class Timer : MonoBehaviour
             currentTime = 0.0f;
 
             TimeOver = true;
+
+            //SceneManager.LoadScene("EndingScene");
+
+            Ending();
         }
 
         int minutes = Mathf.FloorToInt(currentTime / 60F);
@@ -40,6 +50,15 @@ public class Timer : MonoBehaviour
         uiText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
+    void Ending()
+    {
+        alpha += fadeSpeed;
+
+        if (alpha >= 1.3f) //フェードアウトと切り替わりまでの時間
+        {
+            SceneManager.LoadScene("EndingScene");
+        }
+    }
 
 
 }
