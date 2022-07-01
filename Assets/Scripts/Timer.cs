@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] float gameTime = 20.0f;        // ゲーム制限時間 [s]
     Text uiText;                                    // UIText コンポーネント
-    public float currentTime;                              // 残り時間タイマー
+    float currentTime;                              // 残り時間タイマー
     public bool TimeOver;
     public Image FadeoutImage;                      //クリア後のフェードアウト
     float alpha = 0f;

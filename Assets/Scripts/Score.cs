@@ -6,7 +6,8 @@ using UnityEngine.UI;//UIをスクリプトから動かせるように追加す�
 public class Score : MonoBehaviour
 {
     //スコアをメモする変数を宣言する
-    public int score = 0;
+    public static int score = 0;
+
     public GameObject TimeText;
     public GameObject SnailShell;
     public Material Snail1_Material;
@@ -117,17 +118,17 @@ public class Score : MonoBehaviour
         //エンディング
         if (score == 5) //トゥルー
         {
-            Debug.Log("トゥルー");
+           // Debug.Log("トゥルー");
 
         }
         if ((score > 2) && (score < 5)) //ノルマ達成
         {
-            Debug.Log("ノルマ達成");
+            //Debug.Log("ノルマ達成");
 
         }
         if (score < 3) //ノルマ以下
         {
-            Debug.Log("ノルマ以下");
+            //Debug.Log("ノルマ以下");
 
         }
     }
