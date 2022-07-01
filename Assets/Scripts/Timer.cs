@@ -10,11 +10,17 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] float gameTime = 20.0f;        // ゲーム制限時間 [s]
     Text uiText;                                    // UIText コンポーネント
-    float currentTime;                              // 残り時間タイマー
+    public float currentTime;                              // 残り時間タイマー
     public bool TimeOver;
     public Image FadeoutImage;                      //クリア後のフェードアウト
     float alpha = 0f;
     float fadeSpeed = 0.008f;
+
+    public GameObject Count5;
+    public GameObject Count4;
+    public GameObject Count3;
+    public GameObject Count2;
+    public GameObject Count1;
 
     void Start()
     {
@@ -30,6 +36,9 @@ public class Timer : MonoBehaviour
 
         // 残り時間を計算するS
         currentTime -= Time.deltaTime;
+
+        CountDown();
+
 
         // ゼロになったら
         if (currentTime <= 0.0f)
@@ -48,6 +57,30 @@ public class Timer : MonoBehaviour
         int seconds = Mathf.FloorToInt(currentTime - minutes * 60);
         int mseconds = Mathf.FloorToInt((currentTime - minutes * 60 - seconds) * 1000);
         uiText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    void CountDown()
+    {
+        if (currentTime <= 15.9f)
+        {
+            Count5.SetActive(true);
+        }
+        if (currentTime <= 12.9f)
+        {
+            Count4.SetActive(true);
+        }
+        if (currentTime <= 9.9f)
+        {
+            Count3.SetActive(true);
+        }
+        if (currentTime <= 6.9f)
+        {
+            Count2.SetActive(true);
+        }
+        if (currentTime <= 3.9f)
+        {
+            Count1.SetActive(true);
+        }
     }
 
     void Ending()
