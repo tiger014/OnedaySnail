@@ -5,23 +5,26 @@ using Cinemachine;
 
 public class PlayerCameraMove : MonoBehaviour
 {
-    [SerializeField] private CinemachineVirtualCamera STVirtualCamera;
-    [SerializeField] private GameObject STVirtualCamera2;//上と同じオブジェクト
+    [SerializeField] private CinemachineVirtualCamera ObVirtualCamera;
+    [SerializeField] private GameObject ObVirtualCamera2;//上と同じオブジェクト
+
+    [SerializeField] private GameObject SFModeIcon;
+    [SerializeField] private GameObject ObModeIcon;
 
     private CinemachineTrackedDolly stdolly;
 
-    public bool STMode;
-    public float stspeed = 1f;   //移動速度
+    public bool ObMode;
+    public float obspeed = 1f;      //移動速度
     public Vector2 stickR;          //アナログスティック
-    private float stposition;       //パスポジション
+    private float obposition;       //パスポジション
 
     void Start()
     {
-        STMode = false;
+        ObMode = false;
 
         // Virtual Cameraに対してGetCinemachineComponentでCinemachineTrackedDollyを取得する
         // GetComponentではなくGetCinemachineComponentなので注意
-        stdolly = STVirtualCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
+        stdolly = ObVirtualCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
     }
 
     void Update()
@@ -29,35 +32,39 @@ public class PlayerCameraMove : MonoBehaviour
         stickR = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);//右スティック
 
         //モードの切り替え
-        if (STMode == true)
+        if (ObMode == true)
         {
             //STカメラをアクティブにする
-            STVirtualCamera2.SetActive(true);
+            ObVirtualCamera2.SetActive(true);
+            ObModeIcon.SetActive(true);
+            SFModeIcon.SetActive(false);
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space)||(OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)))
             {
-                STMode = false;
+                ObMode = false;
             }
 
             //STModeの時の操作
             if (stickR.x < 0)
             {
                 // パスの位置を更新する
-                stdolly.m_PathPosition += stspeed * Time.deltaTime;
+                stdolly.m_PathPosition += obspeed * Time.deltaTime;
             }
             if (stickR.x > 0)
             {
                 // パスの位置を更新する
-                stdolly.m_PathPosition -= stspeed * Time.deltaTime;
+                stdolly.m_PathPosition -= obspeed * Time.deltaTime;
             }
         }
         else
         {
-            STVirtualCamera2.SetActive(false);
+            ObVirtualCamera2.SetActive(false);
+            ObModeIcon.SetActive(false);
+            SFModeIcon.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space)||(OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)))
             {
-                STMode = true;
+                ObMode = true;
             }
         }
 

@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     float currentTime;                              // 残り時間タイマー
     public bool TimeOver;
     public Image FadeoutImage;                      //クリア後のフェードアウト
-    public float alpha = 0f;
+    float alpha = 0f;
     float fadeSpeed = 0.008f;
 
     void Start()

@@ -17,6 +17,15 @@ public class Score : MonoBehaviour
     public Texture Emission5;
     public Texture Emission6;
 
+    public GameObject Koke0;
+    public GameObject Koke1;
+    public GameObject Koke2;
+    public GameObject Koke3;
+    public GameObject Koke4;
+    public GameObject Koke5;
+
+
+
     //メッセージを受け取る
     void OnScore(int num)
     {
@@ -38,6 +47,7 @@ public class Score : MonoBehaviour
     void Update()
     {
         Koke_texture();
+        Koke_gauge();
 
         if (TimeText.GetComponent<Timer>().TimeOver == true)
         {
@@ -50,45 +60,72 @@ public class Score : MonoBehaviour
 
     void Koke_texture()
     {
-        if ((score ==1) && (score == 2))
+        if ((score ==1))
         {
             //Debug.Log("kawaruze");
             Snail1_Material.SetTexture("_EmissionMap", Emission2);
         }
-
-        if (score == 3)
+        if (score == 2)
         {
             Snail1_Material.SetTexture("_EmissionMap", Emission3);
         }
-        if (score == 4)
+        if (score == 3)
         {
             Snail1_Material.SetTexture("_EmissionMap", Emission4);
         }
-        if (score == 5)
+        if (score == 4)
         {
             Snail1_Material.SetTexture("_EmissionMap", Emission5);
         }
-        if (score == 6)
+        if (score == 5)
         {
             Snail1_Material.SetTexture("_EmissionMap", Emission6);
         }
+    }
 
+    void Koke_gauge()
+    {
+        //Koke0.SetActive(true);
+
+        if (score == 1)
+        {
+            Koke0.SetActive(false);
+            Koke1.SetActive(true);
+        }
+        if (score == 2)
+        {
+            Koke1.SetActive(false);
+            Koke2.SetActive(true);
+        }
+        if (score == 3)
+        {
+            Koke2.SetActive(false);
+            Koke3.SetActive(true);
+        }
+        if (score == 4)
+        {
+            Koke4.SetActive(true);
+        }
+        if (score == 5)
+        {
+            Koke5.SetActive(true);
+        }
     }
 
     void Result()
     {
         //エンディング
-        if (score == 6) //トゥルー
+        if (score == 5) //トゥルー
         {
             Debug.Log("トゥルー");
 
         }
-        if ((score > 3) && (score < 6)) //ノルマ達成
+        if ((score > 2) && (score < 5)) //ノルマ達成
         {
             Debug.Log("ノルマ達成");
 
         }
-        if (score < 4) //ノルマ以下
+        if (score < 3) //ノルマ以下
         {
             Debug.Log("ノルマ以下");
 
