@@ -87,7 +87,7 @@ public class GuidePointer : MonoBehaviour
     {
         if (other.name == "LaserArea")
         {
-            //Debug.Log("エリアに当たっている");
+            Debug.Log("エリアに当たっている");
 
             rayarea = true;
         }
@@ -96,7 +96,7 @@ public class GuidePointer : MonoBehaviour
     {
         if (other.name == "LaserArea")
         {
-            //Debug.Log("エリアを外れた");
+            Debug.Log("エリアを外れた");
 
             rayarea = false;
         }
