@@ -10,6 +10,7 @@ public class PlayerCameraMove : MonoBehaviour
 
     [SerializeField] private GameObject SFModeIcon;
     [SerializeField] private GameObject ObModeIcon;
+    [SerializeField] private GameObject CameraLookCube;
 
     private CinemachineTrackedDolly stdolly;
 
@@ -17,6 +18,8 @@ public class PlayerCameraMove : MonoBehaviour
     public float obspeed = 1f;      //移動速度
     public Vector2 stickR;          //アナログスティック
     private float obposition;       //パスポジション
+
+    public float currentTime = 0f;
 
     void Start()
     {
@@ -31,7 +34,9 @@ public class PlayerCameraMove : MonoBehaviour
     {
         stickR = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);//右スティック
 
-        //モードの切り替え
+        currentTime += Time.deltaTime;
+
+        //モードの切り替え (3秒たったら操作可能になる)
         if (ObMode == true)
         {
             //STカメラをアクティブにする
@@ -39,21 +44,11 @@ public class PlayerCameraMove : MonoBehaviour
             ObModeIcon.SetActive(true);
             SFModeIcon.SetActive(false);
 
-            if (Input.GetKeyDown(KeyCode.Space)||(OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)))
-            {
-                ObMode = false;
-            }
+            CameraLookCube.SetActive(false);
 
-            //STModeの時の操作
-            if (stickR.x < 0)
+            if (currentTime >= 3)
             {
-                // パスの位置を更新する
-                stdolly.m_PathPosition += obspeed * Time.deltaTime;
-            }
-            if (stickR.x > 0)
-            {
-                // パスの位置を更新する
-                stdolly.m_PathPosition -= obspeed * Time.deltaTime;
+                ObservationMode();
             }
         }
         else
@@ -62,11 +57,48 @@ public class PlayerCameraMove : MonoBehaviour
             ObModeIcon.SetActive(false);
             SFModeIcon.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.Space)||(OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)))
+            if (currentTime >= 3)
             {
-                ObMode = true;
+                SnailFollowMode();
             }
         }
+    }
 
+    void ObservationMode()
+    {
+        currentTime = 3f;
+
+        if (Input.GetKeyDown(KeyCode.Space) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)))
+        {
+            ObMode = false;
+
+            currentTime = 0f;
+        }
+
+        //STModeの時の操作
+        if (stickR.x < 0)
+        {
+            // パスの位置を更新する
+            stdolly.m_PathPosition += obspeed * Time.deltaTime;
+        }
+        if (stickR.x > 0)
+        {
+            // パスの位置を更新する
+            stdolly.m_PathPosition -= obspeed * Time.deltaTime;
+        }
+    }
+
+    void SnailFollowMode()
+    {
+        //Debug.Log("変わったぜ");
+        CameraLookCube.SetActive(true);
+        currentTime = 3f;
+
+        if (Input.GetKeyDown(KeyCode.Space) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)))
+        {
+            ObMode = true;
+
+            currentTime = 0f;
+        }
     }
 }
