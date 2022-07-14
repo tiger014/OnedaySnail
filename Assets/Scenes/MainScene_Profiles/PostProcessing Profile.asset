@@ -169,7 +169,7 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 8.32
+    value: 10
   aperture:
     overrideState: 1
     value: 18.3
@@ -178,7 +178,7 @@ MonoBehaviour:
     value: 216
   kernelSize:
     overrideState: 1
-    value: 1
+    value: 0
 --- !u!114 &8102440784828646751
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -232,10 +232,10 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 0
+    value: -9
   tint:
     overrideState: 1
-    value: 28
+    value: 2
   colorFilter:
     overrideState: 1
     value: {r: 1, g: 0.96617115, b: 0.6650944, a: 1}
