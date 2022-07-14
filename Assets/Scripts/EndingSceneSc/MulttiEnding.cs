@@ -24,15 +24,19 @@ public class MulttiEnding : MonoBehaviour
             TrueCanvas.SetActive(true);
 
         }
+
         if ((Endscore > 2) && (Endscore < 5)) //ƒmƒ‹ƒ}’B¬
         {
             Debug.Log("ƒmƒ‹ƒ}’B¬");
             NormalCanvas.SetActive(true);
+
         }
+
         if (Endscore < 3) //ƒmƒ‹ƒ}ˆÈ‰º
         {
             Debug.Log("ƒmƒ‹ƒ}ˆÈ‰º");
             BadCanvas.SetActive(true);
+
         }
     }
 }
