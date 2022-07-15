@@ -24,9 +24,8 @@ public class StartButton : MonoBehaviour
         {
             Cam_alpha = 0.0f;
 
-            StartCanvas.SetActive(false);
             NextCanvas.SetActive(true);
-
+            StartCanvas.SetActive(false);
         }
 
         
