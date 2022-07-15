@@ -5,8 +5,8 @@ using Cinemachine;
 
 public class PlayerCameraMove : MonoBehaviour
 {
-    [SerializeField] private CinemachineVirtualCamera ObVirtualCamera;
-    [SerializeField] private GameObject ObVirtualCamera2;//上と同じオブジェクト
+    [SerializeField] private CinemachineVirtualCamera ObVirtualCamera2;
+    [SerializeField] private GameObject ObVirtualCamera;//上と同じオブジェクト
 
     [SerializeField] private GameObject SFModeIcon;
     [SerializeField] private GameObject ObModeIcon;
@@ -16,6 +16,7 @@ public class PlayerCameraMove : MonoBehaviour
 
     public bool ObMode;
     public float obspeed = 1f;      //移動速度
+
     public Vector2 stickR;          //アナログスティック
     private float obposition;       //パスポジション
 
@@ -23,11 +24,11 @@ public class PlayerCameraMove : MonoBehaviour
 
     void Start()
     {
-        ObMode = false;
+        ObMode = true;
 
         // Virtual Cameraに対してGetCinemachineComponentでCinemachineTrackedDollyを取得する
         // GetComponentではなくGetCinemachineComponentなので注意
-        stdolly = ObVirtualCamera.GetCinemachineComponent<CinemachineTrackedDolly>();
+        stdolly = ObVirtualCamera2.GetCinemachineComponent<CinemachineTrackedDolly>();
     }
 
     void Update()
@@ -40,7 +41,7 @@ public class PlayerCameraMove : MonoBehaviour
         if (ObMode == true)
         {
             //STカメラをアクティブにする
-            ObVirtualCamera2.SetActive(true);
+            ObVirtualCamera.SetActive(true);
             ObModeIcon.SetActive(true);
             SFModeIcon.SetActive(false);
 
@@ -53,7 +54,7 @@ public class PlayerCameraMove : MonoBehaviour
         }
         else
         {
-            ObVirtualCamera2.SetActive(false);
+            ObVirtualCamera.SetActive(false);
             ObModeIcon.SetActive(false);
             SFModeIcon.SetActive(true);
 
@@ -73,18 +74,6 @@ public class PlayerCameraMove : MonoBehaviour
             ObMode = false;
 
             currentTime = 0f;
-        }
-
-        //STModeの時の操作
-        if (stickR.x < 0)
-        {
-            // パスの位置を更新する
-            stdolly.m_PathPosition += obspeed * Time.deltaTime;
-        }
-        if (stickR.x > 0)
-        {
-            // パスの位置を更新する
-            stdolly.m_PathPosition -= obspeed * Time.deltaTime;
         }
     }
 
