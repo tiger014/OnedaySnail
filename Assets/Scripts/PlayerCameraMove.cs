@@ -16,12 +16,6 @@ public class PlayerCameraMove : MonoBehaviour
     private CinemachineTrackedDolly stdolly;
 
     public bool ObMode;
-    public float obspeed = 1f;      //移動速度
-
-    public Vector3 Obt;             //Obのトランスフォーム
-    public Vector2 stickR;          //アナログスティック
-    float Obtx;
-    float Obtz;
 
     private float obposition;       //パスポジション
 
@@ -38,11 +32,6 @@ public class PlayerCameraMove : MonoBehaviour
 
     void Update()
     {
-        //stickR = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);//右スティック
-        //ObVirtualCamera.GetComponent<Transform>();//観察モードのトランスフォーム
-        //Transform Obtransform = ObVirtualCamera.transform;
-        //Obtransform.localPosition = Obt;//Obtに反映させる
-
         currentTime += Time.deltaTime;
 
         //モードの切り替え (3秒たったら操作可能になる)
@@ -83,12 +72,6 @@ public class PlayerCameraMove : MonoBehaviour
 
             currentTime = 0f;
         }
-
-        //移動させる
-        //Obt = new Vector3(Obtx , 9 , Obtz);
-
-        //Obtx += stickR.x * obspeed * Time.deltaTime;
-        //Obtz += stickR.y * obspeed * Time.deltaTime;
     }
 
     void SnailFollowMode()
