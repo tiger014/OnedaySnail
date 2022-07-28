@@ -12,12 +12,17 @@ public class PlayerCameraMove : MonoBehaviour
     [SerializeField] private GameObject ObModeIcon;
     [SerializeField] private GameObject CameraLookCube;
 
+
     private CinemachineTrackedDolly stdolly;
 
     public bool ObMode;
     public float obspeed = 1f;      //移動速度
 
+    public Vector3 Obt;             //Obのトランスフォーム
     public Vector2 stickR;          //アナログスティック
+    float Obtx;
+    float Obtz;
+
     private float obposition;       //パスポジション
 
     public float currentTime = 0f;
@@ -33,7 +38,10 @@ public class PlayerCameraMove : MonoBehaviour
 
     void Update()
     {
-        stickR = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);//右スティック
+        //stickR = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);//右スティック
+        //ObVirtualCamera.GetComponent<Transform>();//観察モードのトランスフォーム
+        //Transform Obtransform = ObVirtualCamera.transform;
+        //Obtransform.localPosition = Obt;//Obtに反映させる
 
         currentTime += Time.deltaTime;
 
@@ -45,7 +53,7 @@ public class PlayerCameraMove : MonoBehaviour
             ObModeIcon.SetActive(true);
             SFModeIcon.SetActive(false);
 
-            CameraLookCube.SetActive(false);
+            //CameraLookCube.SetActive(false);
 
             if (currentTime >= 3)
             {
@@ -75,12 +83,18 @@ public class PlayerCameraMove : MonoBehaviour
 
             currentTime = 0f;
         }
+
+        //移動させる
+        //Obt = new Vector3(Obtx , 9 , Obtz);
+
+        //Obtx += stickR.x * obspeed * Time.deltaTime;
+        //Obtz += stickR.y * obspeed * Time.deltaTime;
     }
 
     void SnailFollowMode()
     {
         //Debug.Log("変わったぜ");
-        CameraLookCube.SetActive(true);
+        //CameraLookCube.SetActive(true);
         currentTime = 3f;
 
         if (Input.GetKeyDown(KeyCode.Space) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)))

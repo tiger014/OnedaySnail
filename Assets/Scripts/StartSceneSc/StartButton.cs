@@ -11,6 +11,11 @@ public class StartButton : MonoBehaviour
     public float alspeed = 0.0f;
     public bool OnClick = false;
 
+    private void Start()
+    {
+        Score.score = 0;    //スコアを0にリセットする
+    }
+
     private void Update()
     {
         StartCanvas.GetComponent<CanvasGroup>().alpha = Cam_alpha;
