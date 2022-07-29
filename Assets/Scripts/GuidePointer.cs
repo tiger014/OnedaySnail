@@ -13,6 +13,9 @@ public class GuidePointer : MonoBehaviour
     public Transform aimMarker;
     public GameObject aimMarkerGm;
     public NavMeshAgent navMeshAgent;
+    public Material AimMarkerMaterial;  //変化させるマーカーのマテ
+    public Texture Pointer_Hit;
+    public Texture Pointer_Out;
     public bool useMouse;
     public bool rayarea;
 
@@ -78,7 +81,7 @@ public class GuidePointer : MonoBehaviour
         }
         else
         {
-            aimMarkerGm.SetActive(false);
+            //aimMarkerGm.SetActive(false);
         }
 
     }
@@ -89,6 +92,13 @@ public class GuidePointer : MonoBehaviour
         {
             Debug.Log("エリアに当たっている");
 
+            AimMarkerMaterial.SetTexture("_MainTex", Pointer_Hit);
+            AimMarkerMaterial.SetTexture("_EmissionMap", Pointer_Hit);
+            AimMarkerMaterial.color = new Color32(0, 100, 100,255);
+
+            Color AimMakerEmissionColor = new Color32(0, 96, 191,255);
+            AimMarkerMaterial.SetColor("_EmissionColor",AimMakerEmissionColor);
+
             rayarea = true;
         }
     }
@@ -97,6 +107,13 @@ public class GuidePointer : MonoBehaviour
         if (other.name == "LaserArea")
         {
             Debug.Log("エリアを外れた");
+
+            AimMarkerMaterial.SetTexture("_MainTex", Pointer_Out);
+            AimMarkerMaterial.SetTexture("_EmissionMap", Pointer_Out);
+            AimMarkerMaterial.color = new Color32(200, 30, 30,255);
+
+            Color AimOutEmissionColor = new Color32(191, 10, 20,255);
+            AimMarkerMaterial.SetColor("_EmissionColor", AimOutEmissionColor);
 
             rayarea = false;
         }
