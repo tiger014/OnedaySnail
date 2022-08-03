@@ -69,6 +69,7 @@ public class GuidePointer : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     navMeshAgent.destination = rayEnd;
+                    Debug.Log("クリックした！");
                 }
             }
             else
