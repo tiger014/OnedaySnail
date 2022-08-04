@@ -26,14 +26,13 @@ public class Timer : MonoBehaviour
     {
         // Textコンポーネント取得
         uiText = GetComponent<Text>();
+        FadeoutImage.GetComponent<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);  //Image取得
         // 残り時間を設定
         currentTime = gameTime; 
     }
 
     void Update()
     {
-        FadeoutImage.GetComponent<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);  //Image取得
-
         // 残り時間を計算するS
         currentTime -= Time.deltaTime;
 

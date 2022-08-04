@@ -44,10 +44,7 @@ public class PlayerCameraMove : MonoBehaviour
 
             //CameraLookCube.SetActive(false);
 
-            if (currentTime >= 3)
-            {
-                ObservationMode();
-            }
+            ObservationMode();
         }
         else
         {
@@ -55,10 +52,7 @@ public class PlayerCameraMove : MonoBehaviour
             ObModeIcon.SetActive(false);
             SFModeIcon.SetActive(true);
 
-            if (currentTime >= 3)
-            {
-                SnailFollowMode();
-            }
+            SnailFollowMode();
         }
     }
 
