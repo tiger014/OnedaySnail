@@ -8,6 +8,7 @@ public class SnailResult : MonoBehaviour
 {
     public int score = 0;
     public GameObject TimeText;
+    public GameObject Item1;
     public NavMeshAgent SnailAgent;
     private float StopSpeed = 0.04f;
 
@@ -24,7 +25,22 @@ public class SnailResult : MonoBehaviour
             {
                 StopSpeed = 0f;
             }
+        }
+        if (Item1.GetComponent<Item>().getitem == true)
+        {
+            //Debug.Log("Stop");
+            // èôÅXÇ…å∏ÇÁÇµÇƒÇ¢Ç≠
+            this.SnailAgent.speed -= StopSpeed;
 
+            //0Ç…Ç»Ç¡ÇΩÇÁé~Ç‹ÇÈ
+            if (SnailAgent.speed <= 0.0f)
+            {
+                StopSpeed = 0f;
+            }
+        }
+        else
+        {
+            SnailAgent.speed = 1.5f;
         }
     }
 }
