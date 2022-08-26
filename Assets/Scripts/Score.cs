@@ -25,8 +25,6 @@ public class Score : MonoBehaviour
     public GameObject Koke4;
     public GameObject Koke5;
 
-
-
     //メッセージを受け取る
     void OnScore(int num)
     {
@@ -39,80 +37,49 @@ public class Score : MonoBehaviour
         //scoreをテキストとして表示する
         scoreText.text = score.ToString("00");
     }
-
-    void Start()
-    {
-        //テクスチャを１にセットする
-        Snail1_Material.SetTexture("_EmissionMap", Emission1);
-    }
     void Update()
     {
-        Koke_texture();
-        Koke_gauge();
+        Koke_TextureGeuge();
 
         if (TimeText.GetComponent<Timer>().TimeOver == true)
         {
             //Debug.Log("TimeOver");
-
             Result();
         }
-
     }
-
-    void Koke_texture()
+    void Koke_TextureGeuge()
     {
-        if ((score ==1))
+        switch (score)
         {
-            //Debug.Log("kawaruze");
-            Snail1_Material.SetTexture("_EmissionMap", Emission2);
-        }
-        if (score == 2)
-        {
-            Snail1_Material.SetTexture("_EmissionMap", Emission3);
-        }
-        if (score == 3)
-        {
-            Snail1_Material.SetTexture("_EmissionMap", Emission4);
-        }
-        if (score == 4)
-        {
-            Snail1_Material.SetTexture("_EmissionMap", Emission5);
-        }
-        if (score == 5)
-        {
-            Snail1_Material.SetTexture("_EmissionMap", Emission6);
-        }
-    }
-
-    void Koke_gauge()
-    {
-        //Koke0.SetActive(true);
-
-        if (score == 1)
-        {
-            Koke0.SetActive(false);
-            Koke1.SetActive(true);
-        }
-        if (score == 2)
-        {
-            Koke1.SetActive(false);
-            Koke2.SetActive(true);
-        }
-        if (score == 3)
-        {
-            Koke2.SetActive(false);
-            Koke3.SetActive(true);
-        }
-        if (score == 4)
-        {
-            Koke4.SetActive(true);
-        }
-        if (score == 5)
-        {
-            Koke5.SetActive(true);
+            case 1:
+                Snail1_Material.SetTexture("_EmissionMap", Emission2);
+                Koke0.SetActive(false);
+                Koke1.SetActive(true);
+                break;
+            case 2:
+                Snail1_Material.SetTexture("_EmissionMap", Emission3);
+                Koke1.SetActive(false);
+                Koke2.SetActive(true);
+                break;
+            case 3:
+                Snail1_Material.SetTexture("_EmissionMap", Emission4);
+                Koke2.SetActive(false);
+                Koke3.SetActive(true);
+                break;
+            case 4:
+                Snail1_Material.SetTexture("_EmissionMap", Emission5);
+                Koke4.SetActive(true);
+                break;
+            case 5:
+                Snail1_Material.SetTexture("_EmissionMap", Emission6);
+                Koke5.SetActive(true);
+                break;
+            default:
+                Snail1_Material.SetTexture("_EmissionMap", Emission1);
+                Koke0.SetActive(true);
+                break;
         }
     }
-
     void Result()
     {
         //エンディング

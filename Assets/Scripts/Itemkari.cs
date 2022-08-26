@@ -9,24 +9,31 @@ public class Itemkari : MonoBehaviour
 	public Material ItemMaterial;
 	public Texture KokeOnItemTex;
 	public Texture KokeOFFItemTex;
+	public ParticleSystem nparticle;
 	public ParticleSystem particle;
+	float a;
 	private void Start()
     {
 		ItemMaterial.SetTexture("_MainTex", KokeOnItemTex);
-		ItemMaterial.SetVector("_EmissionColor", new Vector4(0.2f, 0.5f, 0.1f) * 0.9f);
+		ItemMaterial.SetVector("_EmissionColor", new Vector4(0.2f, 0.5f, 0.1f) * 1.5f);
 	}
     void OnTriggerEnter(Collider other)
 	{
 		Debug.Log(other.name);
 		if (other.name == "Snali")
 		{
-			ItemMaterial.SetTexture("_MainTex", KokeOFFItemTex);    //テクスチャ切り替え
-			ItemMaterial.SetVector("_EmissionColor", new Vector4(0.2f, 0.5f, 0.1f) * 0.0f);
-			audioSource.PlayOneShot(soundgauge);
-			particle.Play();
+			a += 1;
+            if(a == 1)
+            {
+				ItemMaterial.SetTexture("_MainTex", KokeOFFItemTex);    //テクスチャ切り替え
+				ItemMaterial.SetVector("_EmissionColor", new Vector4(0.2f, 0.5f, 0.1f) * 0.0f);
+				audioSource.PlayOneShot(soundgauge);
+				particle.Play();
+				nparticle.Stop();
 
-			GameObject scoreTextGo = GameObject.Find("ScoreText");  //スコアのゲームオブジェクトを取得する
-			scoreTextGo.SendMessage("OnScore", 1);
+				GameObject scoreTextGo = GameObject.Find("ScoreText");  //スコアのゲームオブジェクトを取得する
+				scoreTextGo.SendMessage("OnScore", 1);
+			}
 		}
 	}
 }
