@@ -232,13 +232,13 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: -5
+    value: 20
   tint:
     overrideState: 1
-    value: -20
+    value: 36
   colorFilter:
     overrideState: 1
-    value: {r: 0.6, g: 0.9, b: 0.75, a: 1}
+    value: {r: 0.90440375, g: 0.90588236, b: 0.7058824, a: 1}
   hueShift:
     overrideState: 0
     value: -9

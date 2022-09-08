@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Text))]
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float gameTime = 20.0f;        // ゲーム制限時間 [s]
+    public static float gameTime = 50f;        // ゲーム制限時間 [s]
+
     Text uiText;                                    // UIText コンポーネント
     float currentTime;                              // 残り時間タイマー
     public bool TimeOver;
@@ -33,7 +34,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        // 残り時間を計算するS
+        // 残り時間を計算する
         currentTime -= Time.deltaTime;
 
         CountDown();
