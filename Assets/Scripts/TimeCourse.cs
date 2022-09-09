@@ -17,9 +17,22 @@ public class TimeCourse : MonoBehaviour
     public float timefloow;     //ŠÔŒo‰ß
 
     public float evening;
-    bool onevening;
+    public float sunset;
     public float night;
-    bool onnight;
+    public bool onevening;
+    public bool onsunset;
+    public bool onnight;
+
+    float Lred;
+    float Lgre;
+    float Lble;
+
+    float lint;
+    float evegre;
+    float eveble;
+    float nigred;
+    float niggre;
+    float nigble;
 
     void Start()
     {
@@ -28,8 +41,9 @@ public class TimeCourse : MonoBehaviour
         floowStart = true;
         timeofday = Timer.gameTime;         //ƒQ[ƒ€ŠÔ
 
-        evening = timeofday / 2;            //—[•û
-        night = evening + timeofday / 6;    //–é
+        sunset = timeofday / 2;             //“ú–v
+        evening = sunset - timeofday / 6;   //—[Ä‚¯
+        night = sunset + timeofday / 6;     //–é
 
         direx = 30f;                        //n‚Ü‚Á‚½‚Æ‚«‚ÌŠp“x
         float x = 50 / timeofday;
@@ -38,12 +52,29 @@ public class TimeCourse : MonoBehaviour
         LIntensity = DireLight.GetComponent<Light>().intensity;
         LColor = DireLight.GetComponent<Light>().color;
         LIntensity = 1.3f;
-        LColor = new Color(1f, 1f, 0.8f);
+        Lred = 1f;
+        Lgre = 1f;
+        Lble = 0.8f;
+
+        float q = 1.2f / timeofday;         //‚»‚ê‚¼‚ê‚ÌˆÚsŠÔ
+        lint = q / 6;
+
+        float a = 0.3f / timeofday;
+        evegre = a / 6;
+        float b = 0.2f / timeofday;
+        eveble = b / 6;
+        float c = 0.5f / timeofday;
+        nigred = b / 6;
+        float d = 0.3f / timeofday;
+        niggre = b / 6;
+        float e = 0.4f / timeofday;
+        nigble = b / 6;
 
 
     }
     void Update()
     {
+        LColor = new Color(Lred, Lgre, Lble);
         if (floowStart)
         {
             timefloow += Time.deltaTime;
@@ -66,15 +97,57 @@ public class TimeCourse : MonoBehaviour
         {
             onnight = true;
         }
-        else if (timefloow >= evening)    //—[•û
+        else if (timefloow >= sunset)    //—[•û
+        {
+            onsunset = true;
+        }
+        else if (timefloow >= evening)
         {
             onevening = true;
         }
 
         if(onevening)
         {
+            Debug.Log("—[Ä‚¯n");
+            Lgre -= evegre;
+            Lble -= eveble;
+            if (Lgre <= 0.7f)
+            {
+                Lgre = 0.7f;
+            }
+            if (Lble <= 0.6f)
+            {
+                Lble = 0.6f;
+            }
+        }
+        if(onsunset)
+        {
             Debug.Log("—[•û");
-            LIntensity -= 0.002f;
+            onevening = false;
+            LColor = new Color(1f, 0.7f, 0.6f);
+            LColor = new Color(0.5f, 1f, 1f);
+            Lred -= nigred;
+            Lgre += niggre;
+            Lble += nigble;
+            if (Lred <= 0.5f)
+            {
+                Lred = 0.5f;
+            }
+            if (Lgre >= 1f)
+            {
+                Lgre = 1f;
+            }
+            if (Lble >= 1f)
+            {
+                Lble = 1f;
+            }
+
+
+
+
+
+
+            LIntensity -= lint;
             if(LIntensity <= 0.1f)
             {
                 LIntensity = 0.1f;
@@ -83,6 +156,8 @@ public class TimeCourse : MonoBehaviour
         if (onnight)
         {
             Debug.Log("–é");
+            onsunset = false;
+            LIntensity = 0.1f;
         }
     }
 }
