@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Text))]
 public class Timer : MonoBehaviour
 {
-    public static float gameTime = 50f;        // ゲーム制限時間 [s]
+    public static float gameTime = 360f;        // ゲーム制限時間 [s]
 
     Text uiText;                                    // UIText コンポーネント
     float currentTime;                              // 残り時間タイマー
