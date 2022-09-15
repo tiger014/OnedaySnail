@@ -10577,7 +10577,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199674882}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -37136,6 +37136,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3721782042360209912, guid: d4b38b0f0d0871143b0fb3d60909f876, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bb4db4ccb7049d4d911107edf8af7ea, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4b38b0f0d0871143b0fb3d60909f876, type: 3}
 --- !u!1001 &766288805
@@ -69274,8 +69278,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561494647}
-  m_LocalRotation: {x: -0.08746632, y: -0.7748309, z: 0.10999558, w: -0.6163504}
-  m_LocalPosition: {x: -19.71518, y: 1.8340902, z: -2.043293}
+  m_LocalRotation: {x: -0.16352879, y: 0.09278495, z: 0.01540561, w: 0.98204476}
+  m_LocalPosition: {x: -9.177528, y: -4.4438553, z: -22.297773}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -104451,7 +104455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 224890892}
   soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
-  ItemMaterial: {fileID: 2100000, guid: 7be34068d8957e049a8ce16e9410fd4d, type: 2}
+  ItemMaterial: {fileID: 2100000, guid: 6bb4db4ccb7049d4d911107edf8af7ea, type: 2}
   KokeOnItemTex: {fileID: 2800000, guid: 42c43e03eee25b1458f4ed42b92bdce7, type: 3}
   KokeOFFItemTex: {fileID: 2800000, guid: 6fc0c47084673cb4892680620b032453, type: 3}
   nparticle: {fileID: 708517638}
