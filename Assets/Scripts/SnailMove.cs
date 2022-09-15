@@ -4,19 +4,44 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 
-public class SnailResult : MonoBehaviour
+public class SnailMove : MonoBehaviour
 {
     public int score = 0;
     public GameObject TimeText;
     public NavMeshAgent SnailAgent;
     private float StopSpeed = 0f;
 
+    public GameObject PlayerSnail;
+    private Vector3 _prevPosition;
+    public bool onmove;
     public bool getitem;
     public Animator snailanim;
     private float eatspeed = 2.0f;
-
+    private void Start()
+    {
+        // 初期位置を保持
+        _prevPosition = transform.position;
+    }
     void Update()
     {
+        // 現在位置取得
+        var position = transform.position;
+
+        // 現在速度計算
+        var velocity = (position - _prevPosition) / Time.deltaTime;
+
+        // 前フレーム位置を更新
+        _prevPosition = position;
+
+        if (velocity == new Vector3(0.0f, 0.0f, 0.0f))
+        {
+            onmove = false;
+        }
+        else
+        {
+            onmove = true;
+        }
+
         if (TimeText.GetComponent<Timer>().TimeOver == true)
         {
             //Debug.Log("Stop");
@@ -34,6 +59,14 @@ public class SnailResult : MonoBehaviour
             SnailAgent.speed = 1.5f;
         }
 
+        if (onmove)
+        {
+            snailanim.SetBool("walk", true);
+        }
+        else
+        {
+            snailanim.SetBool("walk", false);
+        }
         if(getitem == true) //アイテム処理
         {
             this.SnailAgent.speed = 0.0f;   //アイテムをとると動きが止まる
@@ -50,6 +83,10 @@ public class SnailResult : MonoBehaviour
         else
         {
             eatspeed = 0.0f;
+        }
+        if (OVRInput.GetDown(OVRInput.RawButton.A))
+        {
+            snailanim.SetTrigger("touch");
         }
     }
     void OnTriggerEnter(Collider other) //衝突時に実行されるメソッド

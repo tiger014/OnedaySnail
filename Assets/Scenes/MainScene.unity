@@ -7699,7 +7699,7 @@ GameObject:
   - component: {fileID: 110204946}
   m_Layer: 0
   m_Name: Koke2
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26759,7 +26759,7 @@ GameObject:
   - component: {fileID: 504151570}
   m_Layer: 0
   m_Name: Koke3
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29691,7 +29691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &644833048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39701,6 +39701,8 @@ MonoBehaviour:
   score: 0
   TimeText: {fileID: 952457380}
   SnailAgent: {fileID: 868279887}
+  PlayerSnail: {fileID: 868279886}
+  onmove: 0
   getitem: 0
   snailanim: {fileID: 1748983735108681340}
 --- !u!114 &868279892
@@ -46323,7 +46325,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952457380}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -55240,7 +55242,7 @@ GameObject:
   - component: {fileID: 1130253413}
   m_Layer: 0
   m_Name: Koke1 (1)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56764,7 +56766,7 @@ GameObject:
   - component: {fileID: 1222404071}
   m_Layer: 0
   m_Name: Koke5
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59720,7 +59722,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 193285796410dae489603cc4189ca0f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59854,7 +59856,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 100
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -69272,8 +69274,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561494647}
-  m_LocalRotation: {x: 0, y: 0.309017, z: 0, w: 0.95105654}
-  m_LocalPosition: {x: -16, y: -2.2599993, z: 0.5}
+  m_LocalRotation: {x: -0.08746632, y: -0.7748309, z: 0.10999558, w: -0.6163504}
+  m_LocalPosition: {x: -19.71518, y: 1.8340902, z: -2.043293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -104412,7 +104414,7 @@ GameObject:
   - component: {fileID: 1976821723}
   m_Layer: 0
   m_Name: Koke4
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

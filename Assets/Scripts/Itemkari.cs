@@ -14,8 +14,8 @@ public class Itemkari : MonoBehaviour
 	float a;
 	private void Start()
     {
-		ItemMaterial.SetTexture("_MainTex", KokeOnItemTex);
 		ItemMaterial.SetVector("_EmissionColor", new Vector4(0.2f, 0.5f, 0.1f) * 1.5f);
+		ItemMaterial.SetTexture("_MainTex", KokeOnItemTex);
 	}
     void OnTriggerEnter(Collider other)
 	{
