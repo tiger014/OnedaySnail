@@ -84,7 +84,7 @@ public class SnailMove : MonoBehaviour
         {
             eatspeed = 0.0f;
         }
-        if (OVRInput.GetDown(OVRInput.RawButton.A))
+        if ((OVRInput.GetDown(OVRInput.RawButton.A))||(Input.GetKey(KeyCode.Space)))
         {
             snailanim.SetTrigger("touch");
         }
