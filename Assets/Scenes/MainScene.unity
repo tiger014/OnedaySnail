@@ -8053,6 +8053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a29ba48200f8294abe9da19baea0e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemCo: {fileID: 110204947}
   audioSource: {fileID: 224890892}
   soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
   ItemMaterial: {fileID: 2100000, guid: 7be34068d8957e049a8ce16e9410fd4d, type: 2}
@@ -28804,6 +28805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a29ba48200f8294abe9da19baea0e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemCo: {fileID: 504151571}
   audioSource: {fileID: 224890892}
   soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
   ItemMaterial: {fileID: 2100000, guid: 2a841f1dc672b554aad69c7f1d5edb00, type: 2}
@@ -57687,8 +57689,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071172341}
-  m_LocalRotation: {x: -0.24065731, y: 0.74886346, z: 0.35842147, w: 0.50281376}
-  m_LocalPosition: {x: 1.1636696, y: -6.583873, z: 4.8559184}
+  m_LocalRotation: {x: 0, y: 0.309017, z: 0, w: 0.95105654}
+  m_LocalPosition: {x: -16, y: -2.2599993, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58928,6 +58930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a29ba48200f8294abe9da19baea0e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemCo: {fileID: 1130253414}
   audioSource: {fileID: 224890892}
   soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
   ItemMaterial: {fileID: 2100000, guid: 18f118a11f5beb64ca077ef61467720c, type: 2}
@@ -60695,6 +60698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a29ba48200f8294abe9da19baea0e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemCo: {fileID: 1222404072}
   audioSource: {fileID: 224890892}
   soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
   ItemMaterial: {fileID: 2100000, guid: 7b7bf4a4d86293b4b80c1c00b3b1f0b3, type: 2}
@@ -62802,7 +62806,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292995585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
@@ -62836,8 +62840,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292995585}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2, y: 15, z: -16}
+  m_LocalRotation: {x: 0, y: 0.309017, z: 0, w: 0.95105654}
+  m_LocalPosition: {x: -16, y: 11, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -74565,8 +74569,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561494647}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2, y: -6.2599993, z: -16}
+  m_LocalRotation: {x: 0, y: 0.309017, z: 0, w: 0.95105654}
+  m_LocalPosition: {x: -16, y: -2.2599993, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -111094,6 +111098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a29ba48200f8294abe9da19baea0e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemCo: {fileID: 1976821724}
   audioSource: {fileID: 224890892}
   soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
   ItemMaterial: {fileID: 2100000, guid: 6bb4db4ccb7049d4d911107edf8af7ea, type: 2}

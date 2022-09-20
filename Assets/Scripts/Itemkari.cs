@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Itemkari : MonoBehaviour
 {
+	public SphereCollider itemCo;
 	public AudioSource audioSource;
 	public AudioClip soundgauge;
 	public Material ItemMaterial;
@@ -33,6 +34,11 @@ public class Itemkari : MonoBehaviour
 
 				GameObject scoreTextGo = GameObject.Find("ScoreText");  //スコアのゲームオブジェクトを取得する
 				scoreTextGo.SendMessage("OnScore", 1);
+				itemCo.enabled = false;
+			}
+			else if(a > 1)
+            {
+				//itemCo.enabled = false;
 			}
 		}
 	}
