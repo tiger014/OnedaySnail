@@ -8,8 +8,9 @@ public class PlayerCameraMove : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera ObVirtualCamera2;
     [SerializeField] private GameObject ObVirtualCamera;//上と同じオブジェクト
 
-    [SerializeField] private GameObject SFModeIcon;
+    [SerializeField] private GameObject AdModeIcon;
     [SerializeField] private GameObject ObModeIcon;
+    [SerializeField] private GameObject ObCameraCube;
     [SerializeField] private GameObject CameraLookCube;
 
 
@@ -19,11 +20,9 @@ public class PlayerCameraMove : MonoBehaviour
 
     private float obposition;       //パスポジション
 
-    public float currentTime = 0f;
-
     void Start()
     {
-        ObMode = true;
+        ObMode = false;
 
         // Virtual Cameraに対してGetCinemachineComponentでCinemachineTrackedDollyを取得する
         // GetComponentではなくGetCinemachineComponentなので注意
@@ -32,53 +31,44 @@ public class PlayerCameraMove : MonoBehaviour
 
     void Update()
     {
-        currentTime += Time.deltaTime;
-
         //モードの切り替え (3秒たったら操作可能になる)
         if (ObMode == true)
         {
-            //STカメラをアクティブにする
-            ObVirtualCamera.SetActive(true);
-            ObModeIcon.SetActive(true);
-            SFModeIcon.SetActive(false);
-
-            //CameraLookCube.SetActive(false);
-
             ObservationMode();
         }
         else
         {
-            ObVirtualCamera.SetActive(false);
-            ObModeIcon.SetActive(false);
-            SFModeIcon.SetActive(true);
-
             SnailFollowMode();
         }
     }
 
     void ObservationMode()
     {
-        currentTime = 3f;
-
-        if (Input.GetKeyDown(KeyCode.Space) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)))
+        if (Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
         {
             ObMode = false;
-
-            currentTime = 0f;
         }
+        //STカメラをアクティブにする
+        ObVirtualCamera.SetActive(true);
+        ObModeIcon.SetActive(true);
+        ObCameraCube.SetActive(true);
+        AdModeIcon.SetActive(false);
+
+        //CameraLookCube.SetActive(false);
+
     }
 
     void SnailFollowMode()
     {
         //Debug.Log("変わったぜ");
         //CameraLookCube.SetActive(true);
-        currentTime = 3f;
-
-        if (Input.GetKeyDown(KeyCode.Space) || (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger)))
+        if (Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
         {
             ObMode = true;
-
-            currentTime = 0f;
         }
+        ObVirtualCamera.SetActive(false);
+        ObModeIcon.SetActive(false);
+        ObCameraCube.SetActive(false);
+        AdModeIcon.SetActive(true);
     }
 }

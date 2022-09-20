@@ -86,7 +86,7 @@ public class SnailMove : MonoBehaviour
         }
         if ((OVRInput.GetDown(OVRInput.RawButton.A))||(Input.GetKey(KeyCode.Space)))
         {
-            snailanim.SetTrigger("touch");
+            //snailanim.SetTrigger("touch");
         }
     }
     void OnTriggerEnter(Collider other) //衝突時に実行されるメソッド

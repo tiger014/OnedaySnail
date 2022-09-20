@@ -18,6 +18,8 @@ public class GuidePointer : MonoBehaviour
     public Texture Pointer_Out;
     public bool useMouse;
     public bool rayarea;
+    public bool Touchaction;
+    public Animator snailanim;
 
     [HideInInspector, SerializeField] int _rayTargetLayer = 0;
     int _rayMaskLayer;
@@ -63,20 +65,39 @@ public class GuidePointer : MonoBehaviour
         if (rayarea)
         {
             aimMarkerGm.SetActive(true);
-
-            if (useMouse)
+            if (!Touchaction)
             {
-                if (Input.GetMouseButtonDown(0))
+                if (useMouse)
                 {
-                    navMeshAgent.destination = rayEnd;
-                    Debug.Log("クリックした！");
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        navMeshAgent.destination = rayEnd;
+                        Debug.Log("クリックした！");
+                    }
+                }
+                else
+                {
+                    if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+                    {
+                        navMeshAgent.destination = rayEnd;
+                    }
                 }
             }
             else
             {
-                if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+                if (useMouse)
                 {
-                    navMeshAgent.destination = rayEnd;
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        snailanim.SetTrigger("touch");
+                    }
+                }
+                else
+                {
+                    if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+                    {
+                        snailanim.SetTrigger("touch");
+                    }
                 }
             }
         }
@@ -102,6 +123,10 @@ public class GuidePointer : MonoBehaviour
 
             rayarea = true;
         }
+        if (other.name == "SnailTouch")
+        {
+            Touchaction = true;
+        }
     }
     void OnTriggerExit(Collider other)
     {
@@ -117,6 +142,10 @@ public class GuidePointer : MonoBehaviour
             AimMarkerMaterial.SetColor("_EmissionColor", AimOutEmissionColor);
 
             rayarea = false;
+        }
+        if (other.name == "SnailTouch")
+        {
+            Touchaction = false;
         }
     }
 

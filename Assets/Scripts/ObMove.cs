@@ -6,7 +6,7 @@ public class ObMove : MonoBehaviour
 {
     public GameObject cam;
     float mainSPEED = 0.1f;
-    public Vector2 stickR;
+    public Vector2 stickL;
 
     void Update()
     {
@@ -20,11 +20,11 @@ public class ObMove : MonoBehaviour
 
 
         //ˆÚ“®
-        stickR = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);
+        stickL = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick);
 
         Transform trans = transform;
         transform.position = trans.position;
-        trans.position += trans.TransformDirection(Vector3.forward) * stickR.y * mainSPEED;
-        trans.position += trans.TransformDirection(Vector3.right) * stickR.x * mainSPEED;
+        trans.position += trans.TransformDirection(Vector3.forward) * stickL.y * mainSPEED;
+        trans.position += trans.TransformDirection(Vector3.right) * stickL.x * mainSPEED;
     }
 }
