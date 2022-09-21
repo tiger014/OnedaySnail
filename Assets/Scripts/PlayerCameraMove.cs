@@ -44,15 +44,12 @@ public class PlayerCameraMove : MonoBehaviour
         ObModeIcon.SetActive(true);
         ObCameraCube.SetActive(true);
         AdModeIcon.SetActive(false);
-
-        //CameraLookCube.SetActive(false);
-
+        CameraLookCube.SetActive(true);
     }
 
     void SnailFollowMode()
     {
         //Debug.Log("•Ï‚í‚Á‚½‚º");
-        //CameraLookCube.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
         {
             ObMode = true;
@@ -62,5 +59,6 @@ public class PlayerCameraMove : MonoBehaviour
         ObModeIcon.SetActive(false);
         ObCameraCube.SetActive(false);
         AdModeIcon.SetActive(true);
+        CameraLookCube.SetActive(false);
     }
 }

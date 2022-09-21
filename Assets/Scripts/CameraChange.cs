@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Cinemachine;
 
 public class CameraChange : MonoBehaviour
 {
-    public Collider SnailCollider;
+    public Image FadeoutImage;
+    float alpha = 0f;
+    float fadefloow = 0f;
+    float fadeSpeed = 0.01f;
+    bool Fade;
 
     public CinemachineVirtualCamera AdVCameraA1;
     public CinemachineVirtualCamera AdVCameraA2;
@@ -22,9 +27,11 @@ public class CameraChange : MonoBehaviour
     public CinemachineVirtualCamera AdVCameraB5;
     public CinemachineVirtualCamera AdVCameraB6;
     public CinemachineVirtualCamera AdVCameraB7;
-
-
-
+    private void Start()
+    {
+        FadeoutImage.GetComponent<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);  //Image取得
+        Fade = false;
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.name == "CangePointA1")   //カメラを切り替えるポイントのコライダー
@@ -125,6 +132,28 @@ public class CameraChange : MonoBehaviour
             Debug.Log("CangePointB7");
             AdVCameraB6.Priority = 1;
             AdVCameraB7.Priority = 10;
+        }
+        if(Fade)
+        {
+            FadeinOut();
+        }
+    }
+    void FadeinOut()
+    {
+        fadefloow += Time.deltaTime;
+
+        if (fadefloow > 0f)
+        {
+            alpha += fadeSpeed;
+        }
+        else if (fadefloow >= 0.5f)
+        {
+            alpha -= fadeSpeed;
+        }
+        else if (fadefloow >= 1.0f)
+        {
+            fadefloow = 0.0f;
+            Fade = false;
         }
     }
 }
