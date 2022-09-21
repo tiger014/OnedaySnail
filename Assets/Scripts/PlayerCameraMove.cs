@@ -5,28 +5,18 @@ using Cinemachine;
 
 public class PlayerCameraMove : MonoBehaviour
 {
-    [SerializeField] private CinemachineVirtualCamera ObVirtualCamera2;
-    [SerializeField] private GameObject ObVirtualCamera;//上と同じオブジェクト
+    [SerializeField] private GameObject ObVirtualCamera;
+    [SerializeField] private GameObject ObVirtualCamera2;
 
     [SerializeField] private GameObject AdModeIcon;
     [SerializeField] private GameObject ObModeIcon;
     [SerializeField] private GameObject ObCameraCube;
     [SerializeField] private GameObject CameraLookCube;
 
-
-    private CinemachineTrackedDolly stdolly;
-
     public bool ObMode;
-
-    private float obposition;       //パスポジション
-
     void Start()
     {
         ObMode = false;
-
-        // Virtual Cameraに対してGetCinemachineComponentでCinemachineTrackedDollyを取得する
-        // GetComponentではなくGetCinemachineComponentなので注意
-        stdolly = ObVirtualCamera2.GetCinemachineComponent<CinemachineTrackedDolly>();
     }
 
     void Update()
@@ -50,6 +40,7 @@ public class PlayerCameraMove : MonoBehaviour
         }
         //STカメラをアクティブにする
         ObVirtualCamera.SetActive(true);
+        ObVirtualCamera2.SetActive(true);
         ObModeIcon.SetActive(true);
         ObCameraCube.SetActive(true);
         AdModeIcon.SetActive(false);
@@ -67,6 +58,7 @@ public class PlayerCameraMove : MonoBehaviour
             ObMode = true;
         }
         ObVirtualCamera.SetActive(false);
+        ObVirtualCamera2.SetActive(false);
         ObModeIcon.SetActive(false);
         ObCameraCube.SetActive(false);
         AdModeIcon.SetActive(true);
