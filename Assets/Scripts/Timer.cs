@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
     float currentTime;                              // 残り時間タイマー
     public bool TimeOver;
     public Image FadeoutImage;                      //クリア後のフェードアウト
-    float alpha = 0f;
+    public float alpha = 0f;
     float fadeSpeed = 0.008f;
 
     public GameObject Count5;
@@ -27,8 +27,7 @@ public class Timer : MonoBehaviour
     {
         // Textコンポーネント取得
         uiText = GetComponent<Text>();
-        
-        FadeoutImage.GetComponent<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);  //Image取得
+
         // 残り時間を設定
         currentTime = gameTime; 
     }
@@ -40,6 +39,8 @@ public class Timer : MonoBehaviour
 
         CountDown();
 
+        Color Fade = new Color(0.0f, 0.0f, 0.0f, alpha);
+        FadeoutImage.GetComponent<Image>().color = Fade;  //Image取得
 
         // ゼロになったら
         if (currentTime <= 0.0f)
