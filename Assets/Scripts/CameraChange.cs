@@ -29,8 +29,7 @@ public class CameraChange : MonoBehaviour
     public CinemachineVirtualCamera AdVCameraB7;
     private void Start()
     {
-        FadeoutImage.GetComponent<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);  //ImageŽæ“¾
-        Fade = false;
+
     }
     void OnTriggerEnter(Collider other)
     {

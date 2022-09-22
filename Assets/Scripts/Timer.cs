@@ -27,6 +27,7 @@ public class Timer : MonoBehaviour
     {
         // Textコンポーネント取得
         uiText = GetComponent<Text>();
+        
         FadeoutImage.GetComponent<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);  //Image取得
         // 残り時間を設定
         currentTime = gameTime; 
@@ -57,6 +58,7 @@ public class Timer : MonoBehaviour
         int seconds = Mathf.FloorToInt(currentTime - minutes * 60);
         int mseconds = Mathf.FloorToInt((currentTime - minutes * 60 - seconds) * 1000);
         uiText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
     }
 
     void CountDown()
@@ -82,7 +84,6 @@ public class Timer : MonoBehaviour
             Count1.SetActive(true);
         }
     }
-
     void Ending()
     {
         alpha += fadeSpeed;
@@ -92,6 +93,4 @@ public class Timer : MonoBehaviour
             SceneManager.LoadScene("EndingScene");
         }
     }
-
-
 }
