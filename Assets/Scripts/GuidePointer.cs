@@ -20,6 +20,8 @@ public class GuidePointer : MonoBehaviour
     public bool rayarea;
     public bool Touchaction;
     public Animator snailanim;
+    public AudioSource audioSource;
+    public AudioClip hitsound;
 
     [HideInInspector, SerializeField] int _rayTargetLayer = 0;
     int _rayMaskLayer;
@@ -72,6 +74,7 @@ public class GuidePointer : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                     {
                         navMeshAgent.destination = rayEnd;
+                        audioSource.PlayOneShot(hitsound);
                         Debug.Log("クリックした！");
                     }
                 }
@@ -80,6 +83,7 @@ public class GuidePointer : MonoBehaviour
                     if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
                     {
                         navMeshAgent.destination = rayEnd;
+                        audioSource.PlayOneShot(hitsound);
                     }
                 }
             }
