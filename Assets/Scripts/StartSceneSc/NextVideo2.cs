@@ -10,11 +10,10 @@ public class NextVideo2 : MonoBehaviour
     public GameObject ImageOP3;
     private void Update()
     {
-
         if (OnClick == true)
         {
-            VideoPlaneOP2.SetActive(false);
             ImageOP3.SetActive(true);
+            VideoPlaneOP2.SetActive(false);
         }
         else
         {
