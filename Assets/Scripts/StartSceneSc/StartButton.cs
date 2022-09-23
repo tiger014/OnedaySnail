@@ -32,8 +32,6 @@ public class StartButton : MonoBehaviour
             NextCanvas.SetActive(true);
             StartCanvas.SetActive(false);
         }
-
-        
     }
 
     public void OnClickStart()
@@ -41,7 +39,5 @@ public class StartButton : MonoBehaviour
         //Debug.Log("‰Ÿ‚³‚ê‚½!");  // ƒƒO‚ğo—Í
 
         OnClick = true;
-
-
     }
 }
