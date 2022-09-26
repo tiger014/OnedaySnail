@@ -25,7 +25,7 @@ public class MulttiEnding : MonoBehaviour
         Normalbgm.SetActive(false);
         Badbgm.SetActive(false);
         ButtonCanvas.SetActive(false);
-        endtime = 30f;
+        endtime = 27f;
     }
     void Update()
     {
@@ -57,7 +57,7 @@ public class MulttiEnding : MonoBehaviour
         }
         else if (endtime <= 5f)
         {
-            ButtonCanvas.SetActive(true);
+            //ButtonCanvas.SetActive(true);
         }
     }
 }

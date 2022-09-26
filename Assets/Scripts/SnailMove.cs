@@ -9,6 +9,10 @@ public class SnailMove : MonoBehaviour
     public int score = 0;
     public GameObject TimeText;
     public GameObject Koke1;
+    public GameObject Koke2;
+    public GameObject Koke3;
+    public GameObject Koke4;
+    public GameObject Koke5;
     public NavMeshAgent SnailAgent;
     private float StopSpeed = 0f;
 
@@ -74,12 +78,7 @@ public class SnailMove : MonoBehaviour
             snailanim.SetBool("eat", true);
 
             eatspeed += Time.deltaTime;
-            if (Koke1.GetComponent<KokeItem>().getItem == false)
-            {
-                this.SnailAgent.speed = 1.5f;
-                snailanim.SetBool("eat", false);
-                getitem = false;
-            }
+
         }
         else
         {
@@ -96,5 +95,11 @@ public class SnailMove : MonoBehaviour
         {
             getitem = true;
         }
+    }
+    public void OFFClickStory()
+    {
+        this.SnailAgent.speed = 1.5f;
+        snailanim.SetBool("eat", false);
+        getitem = false;
     }
 }
