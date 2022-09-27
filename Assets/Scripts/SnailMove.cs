@@ -13,6 +13,12 @@ public class SnailMove : MonoBehaviour
     public GameObject StoryImage3;
     public GameObject StoryImage4;
     public GameObject StoryImage5;
+    public ParticleSystem particle1;
+    public ParticleSystem particle2;
+    public ParticleSystem particle3;
+    public ParticleSystem particle4;
+    public ParticleSystem particle5;
+
     public NavMeshAgent SnailAgent;
     private float StopSpeed = 0f;
 
@@ -130,6 +136,7 @@ public class SnailMove : MonoBehaviour
     public void OFFClickStory()
     {
         this.SnailAgent.speed = 1.5f;
+
         snailanim.SetBool("eat", false);
         getitem = false;
     }

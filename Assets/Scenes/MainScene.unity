@@ -1566,7 +1566,7 @@ GameObject:
   - component: {fileID: 42714677}
   - component: {fileID: 42714676}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particle System5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8232,14 +8232,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemCo: {fileID: 110204947}
   audioSource: {fileID: 224890892}
-  soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
   soundeat: {fileID: 8300000, guid: 93d0398023004f84388f05388d5bd504, type: 3}
   ItemMaterial: {fileID: 2100000, guid: 7be34068d8957e049a8ce16e9410fd4d, type: 2}
   KokeOnItemTex: {fileID: 2800000, guid: 42c43e03eee25b1458f4ed42b92bdce7, type: 3}
   KokeOFFItemTex: {fileID: 2800000, guid: 6fc0c47084673cb4892680620b032453, type: 3}
   nparticle: {fileID: 1722884353}
-  particle: {fileID: 297597256}
-  getItem: 0
 --- !u!1001 &110544406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11508,7 +11505,7 @@ GameObject:
   - component: {fileID: 211953401}
   - component: {fileID: 211953400}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particle System1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17006,7 +17003,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f2258aa47c602174db3d3c55da9c101a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8b7d474f0ab3e3d4682eb8efd7cb8643, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -19041,7 +19038,7 @@ GameObject:
   - component: {fileID: 297597256}
   - component: {fileID: 297597255}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particle System2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26663,7 +26660,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.72, y: 1, z: 0.3}
-  m_Center: {x: 5.2, y: 0.15, z: 5.96}
+  m_Center: {x: 5.2, y: 0.15, z: 5.37}
 --- !u!65 &412465710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28715,6 +28712,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &493421864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493421865}
+  - component: {fileID: 493421866}
+  m_Layer: 5
+  m_Name: ParticleButonsc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &493421865
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493421864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1948109663}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &493421866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493421864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb6baa799b54714ca458cc8d607dfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kokeco1: {fileID: 852493401}
+  kokeco2: {fileID: 110204947}
+  kokeco3: {fileID: 1976821724}
+  kokeco4: {fileID: 1222404072}
+  kokeco5: {fileID: 504151571}
+  particle1: {fileID: 211953401}
+  particle2: {fileID: 297597256}
+  particle3: {fileID: 1939010368}
+  particle4: {fileID: 1813388772}
+  particle5: {fileID: 42714677}
+  audioSource: {fileID: 224890892}
+  soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
+  b: 0
 --- !u!1 &495281206
 GameObject:
   m_ObjectHideFlags: 0
@@ -29136,8 +29195,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1222404073}
-        m_TargetAssemblyTypeName: KokeItem, Assembly-CSharp
+      - m_Target: {fileID: 493421866}
+        m_TargetAssemblyTypeName: ParticleButon, Assembly-CSharp
         m_MethodName: OnClickStory
         m_Mode: 1
         m_Arguments:
@@ -29261,14 +29320,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemCo: {fileID: 504151571}
   audioSource: {fileID: 224890892}
-  soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
   soundeat: {fileID: 8300000, guid: 93d0398023004f84388f05388d5bd504, type: 3}
   ItemMaterial: {fileID: 2100000, guid: 2a841f1dc672b554aad69c7f1d5edb00, type: 2}
   KokeOnItemTex: {fileID: 2800000, guid: 9b8409b437c77c048b981dc56a0377a1, type: 3}
   KokeOFFItemTex: {fileID: 2800000, guid: 49ad660c648c4ae4cb4dae0cdc4628e0, type: 3}
   nparticle: {fileID: 953036221}
-  particle: {fileID: 42714677}
-  getItem: 0
 --- !u!4 &505025308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6303316153411670923, guid: f19e2f44d17052c448a7b1bbe0e1372c, type: 3}
@@ -39280,7 +39336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &719125163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39840,7 +39896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &737171399
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42958,14 +43014,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemCo: {fileID: 852493401}
   audioSource: {fileID: 224890892}
-  soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
   soundeat: {fileID: 8300000, guid: 93d0398023004f84388f05388d5bd504, type: 3}
   ItemMaterial: {fileID: 2100000, guid: 18f118a11f5beb64ca077ef61467720c, type: 2}
   KokeOnItemTex: {fileID: 2800000, guid: 5589707e7dbec194abd52a208d985617, type: 3}
   KokeOFFItemTex: {fileID: 2800000, guid: d80b496586bf04e4fa5216617493fa13, type: 3}
   nparticle: {fileID: 1777306247}
-  particle: {fileID: 211953401}
-  getItem: 0
 --- !u!1001 &854031582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43513,6 +43566,11 @@ MonoBehaviour:
   StoryImage3: {fileID: 954180444}
   StoryImage4: {fileID: 737171398}
   StoryImage5: {fileID: 1566696768}
+  particle1: {fileID: 211953401}
+  particle2: {fileID: 297597256}
+  particle3: {fileID: 1939010368}
+  particle4: {fileID: 1813388772}
+  particle5: {fileID: 42714677}
   SnailAgent: {fileID: 868279887}
   PlayerSnail: {fileID: 868279886}
   onmove: 0
@@ -43915,8 +43973,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 504151572}
-        m_TargetAssemblyTypeName: KokeItem, Assembly-CSharp
+      - m_Target: {fileID: 493421866}
+        m_TargetAssemblyTypeName: ParticleButon, Assembly-CSharp
         m_MethodName: OnClickStory
         m_Mode: 1
         m_Arguments:
@@ -55423,7 +55481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &954180445
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57111,8 +57169,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 852493402}
-        m_TargetAssemblyTypeName: KokeItem, Assembly-CSharp
+      - m_Target: {fileID: 493421866}
+        m_TargetAssemblyTypeName: ParticleButon, Assembly-CSharp
         m_MethodName: OnClickStory
         m_Mode: 1
         m_Arguments:
@@ -60589,8 +60647,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1976821725}
-        m_TargetAssemblyTypeName: KokeItem, Assembly-CSharp
+      - m_Target: {fileID: 493421866}
+        m_TargetAssemblyTypeName: ParticleButon, Assembly-CSharp
         m_MethodName: OnClickStory
         m_Mode: 1
         m_Arguments:
@@ -62467,14 +62525,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemCo: {fileID: 1222404072}
   audioSource: {fileID: 224890892}
-  soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
   soundeat: {fileID: 8300000, guid: 93d0398023004f84388f05388d5bd504, type: 3}
   ItemMaterial: {fileID: 2100000, guid: 7b7bf4a4d86293b4b80c1c00b3b1f0b3, type: 2}
   KokeOnItemTex: {fileID: 2800000, guid: 5c149985095ab214f84d8c59c1111ff7, type: 3}
   KokeOFFItemTex: {fileID: 2800000, guid: 07e6c4de73189f84db76b5066bf9d05e, type: 3}
   nparticle: {fileID: 1866871453}
-  particle: {fileID: 1813388772}
-  getItem: 0
 --- !u!4 &1222429050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4196199969613490, guid: 139dd5681ad53a84fab5db7f67bd7de2, type: 3}
@@ -72349,8 +72404,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1, z: 0.3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.14, y: 1, z: 0.3}
+  m_Center: {x: 0, y: 0, z: -0.74}
 --- !u!4 &1400229650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6206769371556642709, guid: e0a07c65ef046dd47b1b4febcb72819f, type: 3}
@@ -76231,7 +76286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1566696769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78576,7 +78631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1653374290
 RectTransform:
   m_ObjectHideFlags: 0
@@ -93280,7 +93335,7 @@ GameObject:
   - component: {fileID: 1813388772}
   - component: {fileID: 1813388771}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particle System4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106588,7 +106643,7 @@ GameObject:
   - component: {fileID: 1939010368}
   - component: {fileID: 1939010367}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particle System3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111671,6 +111726,7 @@ RectTransform:
   - {fileID: 954180445}
   - {fileID: 737171399}
   - {fileID: 1566696771}
+  - {fileID: 493421865}
   m_Father: {fileID: 1967660649}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -112249,8 +112305,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 110204948}
-        m_TargetAssemblyTypeName: KokeItem, Assembly-CSharp
+      - m_Target: {fileID: 493421866}
+        m_TargetAssemblyTypeName: ParticleButon, Assembly-CSharp
         m_MethodName: OnClickStory
         m_Mode: 1
         m_Arguments:
@@ -112374,14 +112430,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemCo: {fileID: 1976821724}
   audioSource: {fileID: 224890892}
-  soundgauge: {fileID: 8300000, guid: 6145fbba94bf8f4489558cc7a705221a, type: 3}
   soundeat: {fileID: 8300000, guid: 93d0398023004f84388f05388d5bd504, type: 3}
   ItemMaterial: {fileID: 2100000, guid: 6bb4db4ccb7049d4d911107edf8af7ea, type: 2}
   KokeOnItemTex: {fileID: 2800000, guid: 42c43e03eee25b1458f4ed42b92bdce7, type: 3}
   KokeOFFItemTex: {fileID: 2800000, guid: 6fc0c47084673cb4892680620b032453, type: 3}
   nparticle: {fileID: 708517638}
-  particle: {fileID: 1939010368}
-  getItem: 0
 --- !u!1001 &1978816657
 PrefabInstance:
   m_ObjectHideFlags: 0

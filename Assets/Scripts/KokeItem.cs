@@ -6,15 +6,12 @@ public class KokeItem : MonoBehaviour
 {
 	public SphereCollider itemCo;
 	public AudioSource audioSource;
-	public AudioClip soundgauge;
 	public AudioClip soundeat;
 	public Material ItemMaterial;
 	public Texture KokeOnItemTex;
 	public Texture KokeOFFItemTex;
 	public ParticleSystem nparticle;
-	public ParticleSystem particle;
 	float a;
-	public bool getItem;
 
 	private float eatspeed;
 	private void Start()
@@ -30,7 +27,6 @@ public class KokeItem : MonoBehaviour
 			a += 1;
 			if (a == 1)
 			{
-				getItem = true;
 				ItemMaterial.SetTexture("_MainTex", KokeOFFItemTex);    //テクスチャ切り替え
 				ItemMaterial.SetVector("_EmissionColor", new Vector4(0.2f, 0.5f, 0.1f) * 0.0f);
 				audioSource.PlayOneShot(soundeat);
@@ -45,12 +41,5 @@ public class KokeItem : MonoBehaviour
 				//itemCo.enabled = false;
 			}
 		}
-	}
-	public void OnClickStory()
-	{
-		//Debug.Log("押された!");  // ログを出力
-		getItem = false;
-		audioSource.PlayOneShot(soundgauge);
-		particle.Play();//ストーリーとくっついてる
 	}
 }
