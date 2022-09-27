@@ -10,7 +10,9 @@ public class NextVideo : MonoBehaviour
     public GameObject PostProcess;
     public GameObject VideoPlaneOP2;
     public GameObject VideoPlaneOP1;
+    public GameObject NextButtonOp1;
     float a;
+    float buttonspeed = 0;
 
     void Start()
     {
@@ -19,6 +21,13 @@ public class NextVideo : MonoBehaviour
     }
     private void Update()
     {
+        buttonspeed += Time.deltaTime;
+        if (buttonspeed >= 20f)
+        {
+            NextButtonOp1.SetActive(true);
+            buttonspeed = 20f;
+        }
+
         if (a == 0)
         {
             PostProcess.SetActive(false);

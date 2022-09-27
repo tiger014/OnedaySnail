@@ -8,8 +8,17 @@ public class NextVideo2 : MonoBehaviour
     public bool OnClick = false;
     public GameObject VideoPlaneOP2;
     public GameObject ImageOP3;
+    public GameObject NextButtonOp2;
+    float buttonspeed = 0;
     private void Update()
     {
+        buttonspeed += Time.deltaTime;
+        if (buttonspeed >= 15f)
+        {
+            NextButtonOp2.SetActive(true);
+            buttonspeed = 15f;
+        }
+
         if (OnClick == true)
         {
             ImageOP3.SetActive(true);

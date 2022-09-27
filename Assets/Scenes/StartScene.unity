@@ -280,7 +280,6 @@ RectTransform:
   - {fileID: 2062878808}
   - {fileID: 86266}
   - {fileID: 766654654}
-  - {fileID: 1659202614}
   - {fileID: 137903330}
   - {fileID: 2001481206}
   - {fileID: 716020330}
@@ -581,7 +580,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 20133561}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &151338516
 GameObject:
@@ -7031,7 +7030,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 20133561}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7133,6 +7132,7 @@ MonoBehaviour:
   PostProcess: {fileID: 873153127}
   VideoPlaneOP2: {fileID: 2062878807}
   VideoPlaneOP1: {fileID: 1076110012}
+  NextButtonOp1: {fileID: 1359233192}
 --- !u!1 &811150185
 GameObject:
   m_ObjectHideFlags: 0
@@ -8493,12 +8493,12 @@ GameObject:
   - component: {fileID: 1359233195}
   - component: {fileID: 1359233194}
   m_Layer: 5
-  m_Name: NextButton
+  m_Name: NextButton1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1359233193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9068,12 +9068,12 @@ GameObject:
   - component: {fileID: 1627619079}
   - component: {fileID: 1627619078}
   m_Layer: 5
-  m_Name: NextButton (1)
+  m_Name: NextButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1627619077
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9311,13 +9311,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659202613}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000023841858}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: 1564.5167, z: 0}
+  m_LocalScale: {x: 0.008333329, y: 0.014814812, z: 16.129028}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 20133561}
-  m_RootOrder: 5
+  m_Father: {fileID: 2062878808}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1659202615
 MonoBehaviour:
@@ -9334,6 +9334,7 @@ MonoBehaviour:
   OnClick: 0
   VideoPlaneOP2: {fileID: 2062878807}
   ImageOP3: {fileID: 86265}
+  NextButtonOp2: {fileID: 1627619076}
 --- !u!1001 &1671529849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10251,7 +10252,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 20133561}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10444,6 +10445,7 @@ Transform:
   m_Children:
   - {fileID: 615119239}
   - {fileID: 1627619077}
+  - {fileID: 1659202614}
   m_Father: {fileID: 20133561}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: -90}
