@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class NextVideo : MonoBehaviour
 {
-    public bool OnClick = false;
     public GameObject StoryShowCanvas;
 
     public GameObject PostProcess;
     public GameObject VideoPlaneOP2;
     public GameObject VideoPlaneOP1;
-
+    float a;
 
     void Start()
     {
@@ -20,23 +19,22 @@ public class NextVideo : MonoBehaviour
     }
     private void Update()
     {
-
-        PostProcess.SetActive(false);
-        if (OnClick == true)
+        if (a == 0)
+        {
+            PostProcess.SetActive(false);
+            VideoPlaneOP1.SetActive(true);
+            VideoPlaneOP2.SetActive(false);
+        }
+        else if (a == 1)
         {
             VideoPlaneOP1.SetActive(false);
             VideoPlaneOP2.SetActive(true);
         }
-        else
-        {
-            VideoPlaneOP1.SetActive(true);
-            VideoPlaneOP2.SetActive(false);
-        }
-    }
 
+    }
     public void OnClickStart()
     {
         //Debug.Log("âüÇ≥ÇÍÇΩ!");  // ÉçÉOÇèoóÕ
-        OnClick = true;
+        a += 1;
     }
 }

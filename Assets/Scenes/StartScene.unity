@@ -7129,7 +7129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b968de1aa61120d42a97f949c362ac89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnClick: 0
   StoryShowCanvas: {fileID: 20133556}
   PostProcess: {fileID: 873153127}
   VideoPlaneOP2: {fileID: 2062878807}
@@ -7771,7 +7770,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next...
+  m_Text: "\u6B21\u3078\u3059\u3059\u3080"
 --- !u!222 &1037546076
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8825,7 +8824,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -9159,6 +9158,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: b1256787f7d6a364e95289ddd830488d, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 766654655}
+        m_TargetAssemblyTypeName: NextVideo, Assembly-CSharp
+        m_MethodName: OnClickStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9679,7 +9690,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next...
+  m_Text: "\u6B21\u3078\u3059\u3059\u3080"
 --- !u!222 &1721920272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10162,7 +10173,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ready?
+  m_Text: "\u30B9\u30BF\u30FC\u30C8"
 --- !u!222 &1922424402
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 public class KokeItem : MonoBehaviour
 {
-	public GameObject StoryCanvas;
 	public SphereCollider itemCo;
 	public AudioSource audioSource;
 	public AudioClip soundgauge;
@@ -47,29 +46,11 @@ public class KokeItem : MonoBehaviour
 			}
 		}
 	}
-	private void Update()
-    {
-		if (getItem)
-		{
-			eatspeed += Time.deltaTime;
-
-			if (eatspeed >= 1.5f)
-			{
-				StoryCanvas.SetActive(true);
-			}
-		}
-		else
-		{
-			eatspeed = 0.0f;
-			StoryCanvas.SetActive(false);
-		}
-	}
 	public void OnClickStory()
 	{
 		//Debug.Log("押された!");  // ログを出力
-
 		getItem = false;
 		audioSource.PlayOneShot(soundgauge);
-		particle.Play();
+		particle.Play();//ストーリーとくっついてる
 	}
 }

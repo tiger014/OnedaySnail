@@ -8,11 +8,11 @@ public class SnailMove : MonoBehaviour
 {
     public int score = 0;
     public GameObject TimeText;
-    public GameObject Koke1;
-    public GameObject Koke2;
-    public GameObject Koke3;
-    public GameObject Koke4;
-    public GameObject Koke5;
+    public GameObject StoryImage1;
+    public GameObject StoryImage2;
+    public GameObject StoryImage3;
+    public GameObject StoryImage4;
+    public GameObject StoryImage5;
     public NavMeshAgent SnailAgent;
     private float StopSpeed = 0f;
 
@@ -22,6 +22,7 @@ public class SnailMove : MonoBehaviour
     public bool getitem;
     public Animator snailanim;
     private float eatspeed;
+    public int _panelno;
     private void Start()
     {
         // 初期位置を保持
@@ -72,17 +73,46 @@ public class SnailMove : MonoBehaviour
         {
             snailanim.SetBool("walk", false);
         }
-        if(getitem == true) //アイテム処理
+        if(getitem) //アイテム処理
         {
             this.SnailAgent.speed = 0.0f;   //アイテムをとると動きが止まる
             snailanim.SetBool("eat", true);
 
             eatspeed += Time.deltaTime;
-
+            if (eatspeed >= 1.5f)
+            {
+                switch (_panelno)
+                {
+                    case 1:
+                        StoryImage1.SetActive(true);
+                        break;
+                    case 2:
+                        StoryImage2.SetActive(true);
+                        break;
+                    case 3:
+                        StoryImage3.SetActive(true);
+                        break;
+                    case 4:
+                        StoryImage4.SetActive(true);
+                        break;
+                    case 5:
+                        StoryImage5.SetActive(true);
+                        break;
+                    //デフォルト処理
+                    default:
+                        Debug.Log("ストーリーパネルにエラーがあります多分");
+                        break;
+                }
+            }
         }
         else
         {
             eatspeed = 0.0f;
+            StoryImage1.SetActive(false);
+            StoryImage2.SetActive(false);
+            StoryImage3.SetActive(false);
+            StoryImage4.SetActive(false);
+            StoryImage5.SetActive(false);
         }
         if ((OVRInput.GetDown(OVRInput.RawButton.A))||(Input.GetKey(KeyCode.Space)))
         {
@@ -94,6 +124,7 @@ public class SnailMove : MonoBehaviour
         if (other.tag == "Item")
         {
             getitem = true;
+            _panelno += 1;
         }
     }
     public void OFFClickStory()
