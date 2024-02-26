@@ -11027,10 +11027,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &196122796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26498,10 +26503,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &409309695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26644,10 +26654,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &412465709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31884,8 +31899,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609420449}
-  m_LocalRotation: {x: 0, y: 0.19337153, z: 0, w: 0.9811256}
-  m_LocalPosition: {x: -15.706, y: -3.7799997, z: -1.341}
+  m_LocalRotation: {x: 0.05128606, y: 0.0074921167, z: 0.00037221174, w: -0.99865586}
+  m_LocalPosition: {x: -0.6225318, y: -2.7543764, z: -18.254353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33304,10 +33319,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &662594288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34503,10 +34523,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0, g: 1, b: 0, a: 1}
+  _color:
+    r: 0
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!1 &708517635
 GameObject:
   m_ObjectHideFlags: 0
@@ -43340,10 +43365,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &864152124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56790,10 +56820,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &1011309378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58945,8 +58980,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071172341}
-  m_LocalRotation: {x: 0, y: 0.19337153, z: 0, w: 0.9811256}
-  m_LocalPosition: {x: -15.706, y: -3.7799997, z: -1.341}
+  m_LocalRotation: {x: 0.05128606, y: 0.0074921167, z: 0.00037221174, w: -0.99865586}
+  m_LocalPosition: {x: -0.6225318, y: -2.7543764, z: -18.254353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60010,10 +60045,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &1122078149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60533,10 +60573,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &1144651068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72376,10 +72421,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &1399506360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73033,10 +73083,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &1431669305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73992,10 +74047,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &1470073354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86131,10 +86191,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &1737431349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98483,7 +98548,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdecc0ca312c4c9181bea9a8bfac605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gizmosColor: {r: 0, g: 1, b: 0.9616327, a: 1}
+  gizmosColor:
+    r: 0
+    g: 1
+    b: 0.9616327
+    a: 1
+  _camera: {fileID: 0}
 --- !u!114 &1822802312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98666,10 +98736,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enable: 0
-  _color: {r: 0.7981051, g: 1, b: 0, a: 1}
+  _color:
+    r: 0.7981051
+    g: 1
+    b: 0
+    a: 1
   _type: 2
   _size: {x: 1, y: 1, z: 1}
   _radius: 0.5
+  _box: {fileID: 0}
 --- !u!65 &1830406612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105792,7 +105867,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdecc0ca312c4c9181bea9a8bfac605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gizmosColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+  gizmosColor:
+    r: 0.46226418
+    g: 0.46226418
+    b: 0.46226418
+    a: 1
+  _camera: {fileID: 1909732000}
 --- !u!124 &1909731998
 Behaviour:
   m_ObjectHideFlags: 0
@@ -119051,7 +119131,12 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114194312377525914, guid: bc4f23d04e42f4b559542ad840db6530, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114194312377525914, guid: bc4f23d04e42f4b559542ad840db6530, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bc4f23d04e42f4b559542ad840db6530, type: 3}
 --- !u!1001 &2022594623
 PrefabInstance:

@@ -184,20 +184,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "jp.digicre.flower-git": {
-      "version": "https://github.com/nenjiru/FlowerGit.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "dfed34d95ef1f4fc1dafeb669a49979d6aa33626"
-    },
-    "jp.digicre.seika-game-kit": {
-      "version": "https://github.com/nenjiru/SeikaGameKit.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "2f38a59b4db6c88fc86ffe0f110ded664033840e"
-    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

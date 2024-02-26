@@ -116,7 +116,7 @@ public class GuidePointer : MonoBehaviour
     {
         if (other.name == "LaserArea")
         {
-            Debug.Log("エリアに当たっている");
+            //Debug.Log("エリアに当たっている");
 
             AimMarkerMaterial.SetTexture("_MainTex", Pointer_Hit);
             AimMarkerMaterial.SetTexture("_EmissionMap", Pointer_Hit);
@@ -136,7 +136,7 @@ public class GuidePointer : MonoBehaviour
     {
         if (other.name == "LaserArea")
         {
-            Debug.Log("エリアを外れた");
+            //Debug.Log("エリアを外れた");
 
             AimMarkerMaterial.SetTexture("_MainTex", Pointer_Out);
             AimMarkerMaterial.SetTexture("_EmissionMap", Pointer_Out);
